@@ -1,0 +1,15 @@
+swap1=0
+Numbers=np.array([4,3,9,3,1])
+for i in range(0,len(Numbers)-1):
+    index=i
+    for j in range(i+1,len(Numbers)):
+        if Numbers[j]<Numbers[index]:
+            index=j 
+    if Numbers[i] != Numbers[index]:
+         swap1=swap1+1
+         temp=Numbers[i]
+         Numbers[i]=Numbers[index]
+         Numbers[index]=temp
+        
+print("The Tottal Swap are ",swap1)        
+print(Numbers)
